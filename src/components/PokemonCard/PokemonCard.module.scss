@@ -1,0 +1,33 @@
+.PokemonCard {
+    width: 200px;
+    min-height: 230px;
+    margin: 20px;
+
+    background: #fff;
+    border: 1px solid rgb(194, 193, 193);
+    border-radius: 5px;
+    
+}
+
+.imgFluid {
+    max-width: 100%;
+    height: auto;
+}
+
+.btn {
+    padding: 5px 10px;
+
+    background-color: #0d6efd;
+    font-size: 14px;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+
+    cursor: pointer;
+
+    transition: .5s;
+
+    &:hover {
+        background: #0dcaf0;
+    }
+}

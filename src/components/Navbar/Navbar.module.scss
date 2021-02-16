@@ -1,0 +1,48 @@
+.Navbar {
+    height: 100%;
+    width: 250px;
+    
+    background: #fff;
+
+    position: fixed;
+    top: -1px;
+    transform: translateX(-250px);
+
+    transition: .5s;
+
+    z-index: 100;
+}
+
+.NavbarActive {
+    transform: translateX(0);
+}
+
+.Navbar > ul {
+    margin: 20px 0;
+    padding: 0;
+}
+
+.Navbar > ul li {
+    margin-bottom: 20px;
+    padding-left: 40px;
+
+    list-style: none;
+    font-size: 25px;
+
+}
+
+.link {
+    text-decoration: none;
+    color: rgb(58, 57, 57);
+    font-weight: bold;
+
+    transition: .5s;
+
+    &:hover {
+        opacity: .6;
+    }
+}
+
+.activeLink {
+    opacity: .6;
+}

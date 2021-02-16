@@ -1,0 +1,60 @@
+
+.ToggleMenu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+
+    border-radius: 100%;
+    opacity: .8;
+
+    position: fixed;
+    top: 30px;
+    left: 30px;
+
+    cursor: pointer;
+    transition: .5s;
+    z-index: 100;
+
+    &:hover {
+        opacity: 1;
+    }
+
+}
+
+.ToggleMenuActive {
+    transform: translateX(250px);
+}
+
+.line {
+    width: 30px;
+    height: 4px;
+    margin: 2px 0;
+    
+    border-radius: 10px;
+    background-color: #fff;
+
+    transition: .5s;
+}
+
+.lineActive {
+
+    transform: rotate(-45deg);
+    margin: -2px 0;
+
+    &:nth-child(1){
+        opacity: 0;
+    }
+
+    &:nth-child(2){
+        transform: rotate(45deg);
+    }
+
+    &:nth-child(3){
+        transform: rotate(-45deg);
+        // transform: translateY(4px);
+    }
+
+}

@@ -1,24 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import {Route, Switch} from 'react-router-dom'
+
+import Layout from './hoc/Layout/Layout';
+import AboutPage from './pages/AboutPage/AboutPage'
+import PokemonPage from './pages/PokemonPage/PokemonPage'
+import HomePage from './pages/HomePage/HomePage'
+import PokemonsState from './context/pokemons/pokemonState';
+import DetailState from './context/detail/detailState';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <DetailState>
+      <PokemonsState>
+        <Layout>
+          <Switch>
+            <Route path="/about" component={AboutPage} />
+            <Route path="/pokemon/:name" component={PokemonPage} />
+            <Route exact path="/" component={HomePage} />
+          </Switch>
+        </Layout>
+      </PokemonsState>
+    </DetailState>
   );
 }
 
